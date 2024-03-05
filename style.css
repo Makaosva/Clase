@@ -1,0 +1,135 @@
+body {
+  color: aliceblue;
+}
+
+@media (max-width: 576px) /*extra small*/ {
+  body {
+    background-color: brown;
+  }
+  p {
+    font-family: monospace;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .container {
+    grid-template-columns: auto;
+    gap: 10px;
+  }
+  .pagina {
+    border: 2px solid black;
+    display: grid;
+    grid-template-rows: 1fr 10fr 1fr;
+    grid-template-areas: "nav" "main" "footer";
+    min-height: 100vh;
+  }
+}
+
+@media (min-width: 576px) /*small*/ {
+  body {
+    background-color: black;
+  }
+  p {
+    font-family: fantasy;
+  }
+  h2 {
+    color: coral;
+  }
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .container {
+    grid-template-columns: auto auto;
+    gap: 20px;
+  }
+  .pagina {
+    border: 2px solid black;
+    display: grid;
+    grid-template-rows: 1fr 10fr 1fr;
+    grid-template-areas: "nav" "main" "footer";
+    min-height: 100vh;
+  }
+}
+
+@media (min-width: 768px) /*madia*/ {
+  body {
+    background-color: black;
+  }
+  h2 {
+    color: cornflowerblue;
+  }
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .container {
+    grid-template-columns: auto auto auto auto;
+    gap: 20px;
+  }
+}
+
+@media (min-width: 922px) /*large*/ {
+  body {
+    background-color: black;
+  }
+  h2 {
+    color: crimson;
+  }
+  .container {
+    grid-template-columns: auto auto auto auto;
+    gap: 20px;
+  }
+  .pagina {
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+    grid-template-areas:
+      "nav main"
+      "nav main"
+      "nav footer";
+    
+  }
+}
+@media (min-width: 1200px) /*extra large*/ {
+  body {
+    background-color: black;
+  }
+  .container {
+    grid-template-columns: auto auto auto auto auto auto auto;
+    gap: 10px;
+  }
+}
+.grid {
+  display: grid;
+}
+.grid p {
+  background: #749c2c;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid white;
+}
+.container {
+  display: grid;
+}
+.container div img {
+  width: 100%;
+  height: 100%;
+}
+
+nav {
+  grid-area: nav;
+  padding: 10px;
+  background-color: #0037a1;
+  color: white;
+}
+
+main {
+  grid-area: main;
+  padding: 10px;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #d02a1e;
+  color: white;
+  padding: 10px;
+}
